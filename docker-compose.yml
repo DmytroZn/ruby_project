@@ -2,14 +2,14 @@ version: '2'
 
 services:
   ruby:
-    image: znak07/ruby_project:v1
+    image: znak07/ruby_project:v2
     environment:
       TEXT: "Second prikol"
     ports:
       - 8080:8080
 
   ruby2:
-    image: znak07/ruby_project:v1
+    image: znak07/ruby_project:v2
     environment:
       TEXT: "NEW prikol2"
     ports:
