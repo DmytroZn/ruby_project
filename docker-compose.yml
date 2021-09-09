@@ -11,6 +11,6 @@ services:
   ruby2:
     image: znak07/ruby_project:v1
     environment:
-      TEXT: "Second prikol2"
+      TEXT: "NEW prikol2"
     ports:
       - 8081:8080
