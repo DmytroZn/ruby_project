@@ -1,4 +1,4 @@
-sourse 'https://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rack'
 gem 'puma'
