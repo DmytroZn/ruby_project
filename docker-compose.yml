@@ -2,6 +2,6 @@ version: '2'
 
 services:
   ruby:
-    images: znak07/ruby_project:v1
+    image: znak07/ruby_project:v1
     environment:
       TEXT: "Second prikol"
