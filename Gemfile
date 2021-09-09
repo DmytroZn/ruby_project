@@ -1,4 +1,4 @@
 sourse 'https://rubygems.org'
 
-gem 'reck'
+gem 'rack'
 gem 'puma'
