@@ -5,3 +5,5 @@ services:
     image: znak07/ruby_project:v1
     environment:
       TEXT: "Second prikol"
+    ports:
+      - 8080:8080
