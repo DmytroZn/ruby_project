@@ -35,5 +35,5 @@ jobs:
         name: znak07/github_lesson3
         username: znak07
         password: ${{ secrets.DOCKER_PASSWORD }}
-        tags: ${{ github.ref }}
+        tags: ${{ github.run_id }}
     
