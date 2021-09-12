@@ -19,5 +19,5 @@ jobs:
         name: znak07/github_lesson3
         username: znak07
         password: ${{ secrets.DOCKER_PASSWORD }}
-        tags: "latest,another"
+        tags: "latest,${{ env.STATE_RELEASE_VERSION }}"
     
