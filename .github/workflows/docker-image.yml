@@ -13,12 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Publish Docker
-      pre: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
       uses: elgohr/Publish-Docker-Github-Action@3.04
 
       with:
         name: znak07/github_lesson3
         username: znak07
         password: ${{ secrets.DOCKER_PASSWORD }}
-        tags: "${{ env.STATE_RELEASE_VERSION }}"
+        tags: $(echo ${GITHUB_REF:10})
     
