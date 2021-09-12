@@ -16,11 +16,7 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@3.04
 
       with:
-        GIT_SHA: $(git rev-parse HEAD)
-
-        name: znak07/github_lesson3:$GIT_SHA
+        name: znak07/github_lesson3:${{git rev-parse HEAD}}
         username: znak07
         password: ${{ secrets.DOCKER_PASSWORD }}
     
-#     - name: Build the Docker image
-#       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
