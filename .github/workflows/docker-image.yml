@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Build & Push to Docker Hub
+      uses: opspresso/action-docker@master
+      with:
+        args: --docker
+      env:
+        USERNAME: znak07
+        PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        TAG_NAME: "v0.0.1"
+        BUILDX: "true"
+    
+#     - name: Build the Docker image
+#       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
