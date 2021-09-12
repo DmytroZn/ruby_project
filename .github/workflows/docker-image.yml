@@ -16,7 +16,7 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@3.04
 
       with:
-        name: znak07/github_lesson3:${{git rev-parse HEAD}}
+        name: znak07/github_lesson3:${git rev-parse HEAD}
         username: znak07
         password: ${{ secrets.DOCKER_PASSWORD }}
     
