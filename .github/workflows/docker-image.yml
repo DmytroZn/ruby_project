@@ -12,16 +12,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Build & Push to Docker Hub
-      uses: opspresso/action-docker@master
+    - name: Publish Docker
+      uses: elgohr/Publish-Docker-Github-Action@3.04
+
       with:
-        args: --docker
-      env:
-        USERNAME: znak07
-        PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        TAG_NAME: "v0.0.1"
-        BUILDX: "true"
+        name: znak07/github_lesson3
+        username: znak07
+        password: ${{ secrets.DOCKER_PASSWORD }}
     
 #     - name: Build the Docker image
 #       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
